@@ -1,6 +1,6 @@
 // --- CONFIGURATION ---
-const OPENWEATHER_API_KEY = "969a0c1bfb04aaebbfb5748a47aea087"; 
-const GEMINI_API_KEY = ""; // Leave empty as per instructions
+const OPENWEATHER_API_KEY ="Your-OpenWeather-Key-Goes-Here"; //place your OpenWeatherMap API key her
+const GEMINI_API_KEY =  "Your-Gemini-Key-Goes-Here"; // place your Gemini API key here
 
 // --- ELEMENT SELECTORS ---
 const splashScreen = document.getElementById('splashScreen');
