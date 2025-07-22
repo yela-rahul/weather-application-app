@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Link to your external CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Screen 1: Intro Animation -->
+    <div id="splashScreen">
+        <div class="logo-animate">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2.75a.75.75 0 01.75.75v.5a.75.75 0 01-1.5 0v-.5a.75.75 0 01.75-.75zM18.5 6.204a.75.75 0 01.53 1.28l-.353.354a.75.75 0 01-1.06-1.06l.353-.354a.75.75 0 01.53-.22zM20.5 12.75a.75.75 0 00-1.5 0v0a.75.75 0 001.5 0zM18.854 18.854a.75.75 0 11-1.06-1.06l.354-.353a.75.75 0 011.06 1.06l-.354.353zM12 20.5a.75.75 0 000 1.5v0a.75.75 0 000-1.5zM5.146 18.854a.75.75 0 01-1.06 1.06l-.353-.354a.75.75 0 111.06-1.06l.353.354zM3.5 12.75a.75.75 0 001.5 0v0a.75.75 0 00-1.5 0zM5.53 7.484a.75.75 0 011.06-1.06l-.354-.353a.75.75 0 11-1.06 1.06l.354.353zM12 6.5A5.5 5.5 0 1017.5 12 5.506 5.506 0 0012 6.5zm0 9a3.5 3.5 0 110-7 3.5 3.5 0 010 7z"/>
+            </svg>
+            <h1>Weather</h1>
+        </div>
+    </div>
+
+    <!-- Screen 2 & 3: Main Application -->
+    <div id="mainContent" class="main-container">
+        <div class="header-container">
+            <h1>Weather Forecast</h1>
+            <p>Enter a city to get the latest weather updates.</p>
+            <form id="searchForm">
+                <input type="text" id="cityInput" placeholder="Enter City Name (e.g., London)" required>
+                <button type="submit" class="search-button">
+                    Search
+                </button>
+            </form>
+        </div>
+
+        <!-- Results Area -->
+        <div id="resultsContent" class="hidden">
+            <div id="loader" class="hidden">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle opacity="0.25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path opacity="0.75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>
+                <p>Fetching data...</p>
+            </div>
+            <div id="errorBox" class="hidden"></div>
+            <div id="weatherDetails">
+                <!-- Weather and Gemini results will be injected here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Link to your external JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
